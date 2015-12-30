@@ -19,18 +19,17 @@ public class Step3 {
             arrayB[i] = Integer.parseInt(stringsB[i]);
         }
         reader.close();
+        int max = arrayA[0] + arrayB[0];
         int maxA = arrayA[0];
         int maxB = arrayB[0];
         int x = 0;
         int y = 0;
         for (int i = 0; i < arrayB.length; i++) {
-            if (i > 0) {
-                if (maxA < arrayA[i - 1] && y > i-1){
-                    maxA = arrayA[i - 1];
-                    x = i - 1;
-                }
-                if (arrayB[i] > maxB && x < i) {
-                    maxB = arrayB[i];
+            for (int j = 0; j <= i; j++) {
+                int sum = arrayA[j] + arrayB[i];
+                if (max < sum) {
+                    max = sum;
+                    x = j;
                     y = i;
                 }
             }
