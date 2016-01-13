@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.security.ProtectionDomain;
 import java.util.Date;
 
 public class Main {
@@ -12,6 +13,8 @@ public class Main {
         System.out.println(-9%5);
         System.out.println((-9)%(-5));
         ClassLoader l = ClassLoader.getSystemClassLoader();
+        SecurityManager manager = new SecurityManager();
+
         char c = '\u0202';
         System.out.println((int)c);
         System.out.println(1 + 2 + " = " + 12);
