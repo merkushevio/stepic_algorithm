@@ -1,20 +1,21 @@
 package module1;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.security.ProtectionDomain;
-import java.util.Date;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println(9%-5);
         System.out.println(-9%5);
         System.out.println((-9)%(-5));
-        ClassLoader l = ClassLoader.getSystemClassLoader();
+        ClassLoader l = Runtime.class.getClassLoader();
         SecurityManager manager = new SecurityManager();
-
+        StringTokenizer tokenizer = new StringTokenizer("ab,ac;", ",;", true);
+        System.out.println(tokenizer.nextToken());
+        Locale locale = Locale.getDefault();
+        //double d = 1.0*5/3;
+        //System.out.println(d);
         char c = '\u0202';
         System.out.println((int)c);
         System.out.println(1 + 2 + " = " + 12);
@@ -48,6 +49,12 @@ public class Main {
         int day = new Date().getDay();
         System.out.println(day);
         System.gc();
+
+
+        new Object(){};
+        File file = new File("test");
+        Map<int[], String> map=new HashMap<>();
+
     }
 
     static class Test extends Thread {
@@ -90,5 +97,7 @@ public class Main {
             System.out.println(s1 + s2 + " !");
         }
     }
+
+
 
 }
