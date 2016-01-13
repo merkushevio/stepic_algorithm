@@ -40,6 +40,11 @@ public class Main {
                 return 0;
             }
         };
+        try {
+            Reader reader = new InputStreamReader(is, "windows-1251");
+        } catch (Exception e) {
+
+        }
         int day = new Date().getDay();
         System.out.println(day);
         System.gc();
