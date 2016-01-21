@@ -33,7 +33,7 @@ public class Main {
         //Run methods
         pyramid(args[0]);
     }
-    //method transform the pyramid until the pyramid more than 1 length
+    //method transform the pyramid until the pyramid's length more than 1
     public static void pyramid(String string) {
         int n = string.length()/4;
         StringBuilder builder = new StringBuilder();
@@ -48,7 +48,7 @@ public class Main {
             pyramid(string);
         } else return;
     }
-    //Method transition group from pyramid until bits not equals 0000 or 1111
+    //Method transition pyramid's group until not equals 0000 or 1111
     public static String transition(String substring) {
         while (substring != null) {
             substring = map.get(substring);
