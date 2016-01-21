@@ -23,12 +23,7 @@ public class Main {
             map.put("1101", "1110");
             map.put("1110", "0111");
             map.put("1111", "1111");
-        String birthday = Integer.toString(25092, 2) +"0";
-        System.out.println(birthday);
-        pyramid(birthday);
-        String test = "1100100100001111110110101010001000100001011010001100001000110100";
-        System.out.println(test);
-        pyramid(test);
+
         if (args.length < 1) {
             return;
         }
