@@ -35,13 +35,16 @@ public class Main {
     }
     //method transform the pyramid until the pyramid's length more than 1
     public static void pyramid(String string) {
+        //number of groups
         int n = string.length()/4;
         StringBuilder builder = new StringBuilder();
         int k = 0;
+        //transformation pyramid
         for (int i = 0; i < n; i++) {
             builder.append(transition(string.substring(i * 4, k + 4)));
             k += 4;
         }
+        //check received pyramid
         string = builder.toString();
         System.out.println(string);
         if (string.length() > 1) {
@@ -50,8 +53,11 @@ public class Main {
     }
     //Method transition pyramid's group until not equals 0000 or 1111
     public static String transition(String substring) {
+        //print before transformation
+        System.out.println(substring);
         while (substring != null) {
             substring = map.get(substring);
+            //print after transformation
             System.out.println(substring);
             if (substring.equals("1111") ) {
                 return "1";
