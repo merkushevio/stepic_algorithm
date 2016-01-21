@@ -24,11 +24,13 @@ public class Main {
             map.put("1101", "1110");
             map.put("1110", "0111");
             map.put("1111", "1111");
-
+        //Check argument
         if (args.length < 1) {
             return;
         }
+        //Print it
         System.out.println(args[0]);
+        //Run methods
         pyramid(args[0]);
     }
     //method transform the pyramid until the pyramid more than 1 length
@@ -46,7 +48,7 @@ public class Main {
             pyramid(string);
         } else return;
     }
-    //Method transition group from pyramid
+    //Method transition group from pyramid until bits not equals 0000 or 1111
     public static String transition(String substring) {
         while (substring != null) {
             substring = map.get(substring);
