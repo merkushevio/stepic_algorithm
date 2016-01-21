@@ -7,6 +7,7 @@ public class Main {
     private static HashMap<String, String> map = new HashMap<>();
 
     public static void main(String[] args) {
+        //Map, keys that bits before transition and values - bits after transition
             map.put("0000", "0000");
             map.put("0001", "1000");
             map.put("0010", "0001");
@@ -27,10 +28,10 @@ public class Main {
         if (args.length < 1) {
             return;
         }
-        System.out.println(args[1]);
-        pyramid(args[1]);
+        System.out.println(args[0]);
+        pyramid(args[0]);
     }
-
+    //method transform the pyramid until the pyramid more than 1 length
     public static void pyramid(String string) {
         int n = string.length()/4;
         StringBuilder builder = new StringBuilder();
@@ -45,10 +46,11 @@ public class Main {
             pyramid(string);
         } else return;
     }
-
+    //Method transition group from pyramid
     public static String transition(String substring) {
         while (substring != null) {
             substring = map.get(substring);
+            System.out.println(substring);
             if (substring.equals("1111") ) {
                 return "1";
             }
