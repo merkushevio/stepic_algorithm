@@ -41,13 +41,14 @@ public class Operations {
                     }finally {
                         acc2.getLock().unlock();
                     }
-                }
+                } else acc2.incFailedTransferCount();
             }finally {
                 acc1.getLock().unlock();
             }
         }
         else {
             //error, waiting lock
+            acc1.incFailedTransferCount();
         }
 
     }
