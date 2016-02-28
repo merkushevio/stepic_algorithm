@@ -3,7 +3,7 @@ package Concurrency;
 import java.util.concurrent.TimeUnit;
 
 public class Operations {
-    final int WAIT_SEC = 5;
+    final static int WAIT_SEC = 5;
     public static void main(String[] args) {
 
         final Account account1 = new Account(1000);

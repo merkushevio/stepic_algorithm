@@ -33,9 +33,11 @@ public class Account {
 
     public void withDraw(int amount) {
         balance -= amount;
+        System.out.println(balance);
     }
 
     public void deposit(int amount) {
         balance += amount;
+        System.out.println(balance);
     }
 }
