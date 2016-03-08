@@ -9,10 +9,10 @@ public class Operations2 {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
         ExecutorService service = Executors.newFixedThreadPool(3);
         scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
-            @Override
+            //@Override
             public void run() {
-                System.out.println("Failed From: " + accFrom.getFailCounter());
-                System.out.println("Failed To: " + accTo.getFailCounter());
+//                System.out.println("Failed From: " + accFrom.getFailCounter());
+//                System.out.println("Failed To: " + accTo.getFailCounter());
             }
         }, 0, 1, TimeUnit.SECONDS);
         for (int i = 0; i < 10; i++) {
